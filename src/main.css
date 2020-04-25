@@ -1,0 +1,238 @@
+html,
+body,
+#root {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(36, 36, 36);
+  background-color: rgb(241, 241, 241);
+  letter-spacing: 0.3px;
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body,
+  #root {
+    background-color: lightblue;
+    /* padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(36, 36, 36); */
+    height: 100vh;
+  }
+}
+
+.parent {
+  background-color: lightblue;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 15px;
+  margin: 5vh auto 5vh;
+  height: 80vh;
+  width: 600px;
+  display: flex;
+  flex-flow: column;
+}
+
+@media only screen and (max-width: 600px) {
+  .parent {
+    background-color: lightblue;
+    margin: auto;
+    border: none;
+    border-radius: 0;
+    /* padding: 0; */
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+  color: rgb(70, 0, 58);
+  font-family: 'Lato', sans-serif;
+}
+
+.logo--small {
+  font-size: 20px;
+}
+
+.landing-page__container {
+  margin: 30vh auto;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+}
+
+.landing-page__button {
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-size: 1em;
+  border: 0;
+  outline: none;
+  color: white;
+  background-color: rgb(65, 65, 226);
+  border-radius: 5px;
+}
+
+.landing-page__button:hover {
+  background-color: rgb(100, 100, 235);
+}
+
+.landing-page__input {
+  padding: 10px 10px;
+  font-size: 1.1em;
+  margin: 10px;
+  border: 1px solid rgb(165, 165, 165);
+  outline: none;
+  border-radius: 5px;
+}
+
+.landing-page__input--invalid {
+  border: 1px solid rgb(255, 0, 0);
+}
+
+.landing-page__feedback {
+  border: 1px rgba(59, 59, 59, 0.404) solid;
+  border-radius: 5px;
+  background-color: rgba(238, 255, 0, 0.158);
+  color: rgba(0, 0, 0, 0.822);
+  display: inline-block;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 10px 15px;
+}
+
+.chat-header {
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  border-bottom: 1px rgb(117, 117, 117) solid;
+}
+
+.chat-header__text {
+  font-size: 0.9em;
+  font-weight: 500;
+  max-width: 600px;
+  flex-grow: 0;
+  padding: 0;
+  margin: 4px 1px 0 0;
+}
+
+.chat-header__button {
+  flex-grow: 0;
+  cursor: pointer;
+  padding: 1px 3px;
+  color: rgb(44, 44, 44);
+  border: 1px solid rgb(44, 44, 44);
+  outline: none;
+  background-color: transparent;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.all-messages {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.all-messages::-webkit-scrollbar-track {
+  border-radius: 9px;
+  background-color: transparent;
+}
+
+.all-messages::-webkit-scrollbar {
+  width: 9px;
+  background-color: transparent;
+}
+
+.all-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(46, 46, 46, 0.281);
+}
+
+.all-messages::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(97, 97, 97, 0.281);
+}
+
+.chat-interface {
+  padding: 10px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  border-top: 1px rgb(117, 117, 117) solid;
+}
+
+.chat-interface__input {
+  font-size: 1.1em;
+  background-color: transparent;
+  max-width: 600px;
+  padding: 10px 10px;
+  flex-grow: 1;
+  border: solid 1px rgb(117, 117, 117);
+  border-radius: 8px 0 0 8px;
+  border-right: 0;
+  outline: none;
+}
+
+.chat-interface__input--invalid {
+  border: rgb(255, 0, 0) 1px solid;
+}
+
+.chat-interface__button {
+  flex-grow: 0;
+  display: inline-block;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: 1em;
+  border: 0;
+  user-select: none;
+  outline: none;
+  color: white;
+  background-color: rgb(65, 65, 226);
+  border-radius: 0 8px 8px 0;
+}
+
+.chat-interface__button:hover {
+  background-color: rgb(100, 100, 235);
+}
+
+.message__container {
+  text-align: left;
+  margin: 5px;
+}
+
+.message__container--self {
+  text-align: right;
+}
+
+.message-item-server {
+  margin: 10px 15px;
+}
+
+.message-item {
+  text-align: right;
+  display: inline-block;
+  background-color: rgb(139, 231, 147);
+  margin: 8px;
+  padding: 10px 16px;
+  border-radius: 5px;
+  border-radius: 0 10px 10px;
+}
+
+.message-item--self {
+  text-align: left;
+  background-color: rgb(193, 138, 255);
+  border-radius: 10px 0 10px 10px;
+  margin-right: 3px;
+}
+
+.message-text-container {
+  font-size: 0.7em;
+  font-weight: 700;
+}
